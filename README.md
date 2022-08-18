@@ -1,2 +1,2 @@
 # Practice
-All Records of Practicing any forms of Programming
+All Records of Practicing Any Forms of Programming
