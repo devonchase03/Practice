@@ -1,0 +1,13 @@
+weight = int(input('Enter your weight: '))
+print('This will be converted into either KG or LBS')
+conversion = input('In (L)bs or (K)g?: ')
+
+if conversion.upper()=='L':
+    converted = weight * 0.45
+    print(f"You are {converted} kilos")
+elif conversion.upper()=='K':
+    converted2 = weight / 0.45
+    print(f"You are {converted2} pounds")
+else:
+    print('Sorry, invalid response. Please try again.')
+
