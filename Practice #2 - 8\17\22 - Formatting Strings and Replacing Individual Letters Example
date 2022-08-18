@@ -1,0 +1,14 @@
+text = 'I love code'
+print(text.replace('c', 'm'))
+
+I love mode
+
+text2 = 'I love code'
+print(text.upper())
+
+I LOVE CODE
+
+text3 = 'I love code'
+print(text.lower())
+
+i love code
