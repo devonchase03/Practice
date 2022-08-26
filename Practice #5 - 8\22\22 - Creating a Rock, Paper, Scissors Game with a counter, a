@@ -1,0 +1,49 @@
+import random
+
+play = True
+counter = 0
+while play:
+    # this begins the user introduction
+
+    print(f"""
+        Current games won: {counter} 
+        """)
+    user = input("Let's play rock, paper, scissors! You go first: ").upper()
+# the list below states the conditions which the computer must follow.
+# Only these three choices can it make against the player.
+    RPS_options = ["ROCK", "PAPER", "SCISSORS"]
+
+    computer = (random.choice(RPS_options))
+
+    print(f"You chose {user}. The computer chose {computer}.")
+
+    if user == computer:
+        print(f"Both players selected {user}. It's a tie!")
+    elif user == "ROCK":
+        if computer == "SCISSORS":
+            print("ROCK smashes SCISSORS. You WIN!")
+            counter += 1
+        else:
+            print("PAPER covers ROCK. You LOSE!")
+    elif user == "PAPER":
+        if computer == "ROCK":
+            print("PAPER covers ROCK. You WIN!")
+            counter += 1
+        else:
+            print("SCISSORS cuts PAPER. You LOSE!")
+    elif user == "SCISSORS":
+        if computer == "PAPER":
+            print("SCISSORS cuts PAPER. You WIN!")
+            counter += 1
+        else:
+            print("ROCK smashes SCISSORS. You LOSE!")
+
+    reset_answer = ["YES", "NO", "no", "yes", "y", "n"]
+    reset_answer_incorrect = None
+    while reset_answer_incorrect not in reset_answer:
+        reset_answer_incorrect = input("That was fun! would you like to play again? Yes or no: ")
+    if reset_answer_incorrect == "YES" or reset_answer_incorrect == "yes" or reset_answer_incorrect == "y":
+        continue
+    elif reset_answer_incorrect == "NO" or reset_answer_incorrect == "no" or reset_answer_incorrect == "n":
+        print("Thanks for playing!")
+        break
